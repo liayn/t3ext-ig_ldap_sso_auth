@@ -56,6 +56,8 @@ class Configuration
 
     protected bool $ldapSsl = false;
 
+    protected int $ldapTimeout = 0;
+
     protected string $ldapBindDn = '';
 
     protected string $ldapPassword = '';
@@ -206,6 +208,11 @@ class Configuration
     public function isLdapSsl(): bool
     {
         return $this->ldapSsl;
+    }
+
+    public function getLdapTimeout(): int
+    {
+        return $this->ldapTimeout;
     }
 
     /**
